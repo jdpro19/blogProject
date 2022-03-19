@@ -39,7 +39,7 @@ function Home() {
                         <button onClick={() => {
                             deletePost(post.id);
                         }}>
-                            X
+                            &#9587;
                         </button>
                     </div>
                     <div className="postTextContainer">
