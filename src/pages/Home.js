@@ -11,7 +11,7 @@ function Home() {
         const getPosts = async () => {
             const data = await getDocs(postsCollectionRef);
 
-            // Displaying our data from firebase to the console.
+            // Displaying our data from firebase to the console
             // console.log(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
 
             setPostList(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
@@ -27,7 +27,6 @@ function Home() {
 
     return(
         <div className="homePage">
-<<<<<<< HEAD
         {postLists.map((post) => {
             return (
                 <div className="post"> 
@@ -53,25 +52,6 @@ function Home() {
             );                
         })}
     </div>
-=======
-            {postLists.map((post) => {
-                return (
-                    <div className="post"> 
-                        <div className="postHeader">
-                            <div className="title">
-                                <h1> {post.title} </h1>
-                            </div>
-                        </div>
-                        <div className="postTextContainer">
-                             {post.postText} 
-                        </div>
-                        <h3>@{post.author.name}</h3>
-                    </div>
-
-                );                
-            })}
-        </div>
->>>>>>> 86136d6f46ad706e3a627d5746fe4cddb9f1b221
     );
 }
 
