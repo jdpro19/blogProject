@@ -1,0 +1,18 @@
+.post{
+    border: 1px solid greenyellow;
+    background-color: azure;
+}
+
+.postHeader{
+    position: relative;
+}
+
+.title{    
+    width: 600px;
+}
+
+.deletePost{
+    position: absolute;
+    left:650px;
+    bottom: 20px;
+}

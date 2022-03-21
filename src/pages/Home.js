@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getDocs, collection, deleteDoc, doc} from 'firebase/firestore';
 import { db } from '../firebase-config';
+import '../css/Home.css';
 
 function Home() {
 
@@ -34,14 +35,15 @@ function Home() {
                         <div className="title">
                             <h1> {post.title} </h1>
                         </div>
+                        <div className="deletePost">
+                            <button onClick={() => {
+                                deletePost(post.id);
+                            }}>
+                                &#10060;
+                            </button>
+                        </div>
                     </div>
-                    <div className="deletePost">
-                        <button onClick={() => {
-                            deletePost(post.id);
-                        }}>
-                            &#9587;
-                        </button>
-                    </div>
+                    
                     <div className="postTextContainer">
                          {post.postText} 
                     </div>
